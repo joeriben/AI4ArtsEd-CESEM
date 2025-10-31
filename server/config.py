@@ -23,7 +23,7 @@ COMFYUI_PORT = "7821"
 
 # Model Configuration
 ANALYSIS_MODEL = "llava:13b"
-TRANSLATION_MODEL = "gemma2:9b"
+TRANSLATION_MODEL = "gemma3:27b"
 SAFETY_MODEL = "llama-guard3:8b"
 
 # Feature Flags
@@ -34,18 +34,24 @@ LOOP_GENERATION = 1
 LOOP_COMFYUI = 1
 
 # Translation Prompt
-TRANSLATION_PROMPT = """Translate the following text to English. CRITICAL RULES:
-1. Preserve ALL brackets exactly as they appear: (), [], {{}}, and especially triple brackets ((()))
-2. Do NOT remove or modify any brackets or parentheses
-3. Translate the prompt into English with maximal semantic preservation. Maintain the original structure, and preserve all culturally specific terms or non-translatable phrases in their original form. 
-4. Do not translate proper names, ritual terms, or material names unless they have a common English usage. Instead, leave them untranslated and preserve their position. 
-5. Do not paraphrase, interpret, or summarize. Do not add any comments or explanations.
-6. Do NOT add any meta-comments or explanations
-7. Output ONLY the translated text, nothing else
-8. If text is already in English, return it unchanged!
-9. Maintain the exact structure and formatting
+TRANSLATION_PROMPT = """
+A. Input Correction Phase
+Expect input from young people aged 10–15 participating in an Arts Education class or course.
+Do not expect perfect spelling.
+If you receive misspelled or incomplete sentences, infer what the young person most likely intended as a subject for an image prompt, and correct the input accordingly.
+B. Translation Phase
+If the (original or corrected) text is not in English, translate it into English according to the following critical rules:
+Preserve all brackets and parentheses exactly as they appear, including: (), [], {{}}, and especially triple parentheses ((())).
+Do not remove, alter, or reposition any brackets or parentheses.
+Translate into English with maximum semantic precision, preserving the original structure and all culturally specific or untranslatable terms in their original form.
+Do not translate proper names, ritual terms, or material names unless they have a well-established English equivalent.
+Do not paraphrase, interpret, or summarize.
+Do not add any meta-comments, explanations, or notes.
+Output only the translated text — nothing else.
+If the text is already in English, return it unchanged.
+Maintain the exact original structure and formatting.
 
-Text to translate:
+Text to correct or translate:
 
 {text}"""
 
