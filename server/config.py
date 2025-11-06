@@ -82,19 +82,39 @@ CRITICAL RULES:
 - END your response after completing step 4, with NO additional text"""
 
 # Model Mapping Configuration
-# Maps local Ollama model names to OpenRouter equivalents for fallback
-# Reduced to only models actually used in PromptInterception nodes
 OLLAMA_TO_OPENROUTER_MAP = {
-    # Mistral Small (24B) - optimal for complex metaprompts, fast, precise instruction following
-    # Used as fallback for: mistral:7b, mistral-nemo:latest, mistral-small:24b
-    "mistral:7b": "mistralai/mistral-small",
-    "mistral-nemo": "mistralai/mistral-small",
-    "mistral-nemo:latest": "mistralai/mistral-small",
-    "mistral-small:24b": "mistralai/mistral-small",
-
-    # Gemini Flash (5B) - best for translation, excellent multilingual capabilities
-    # Used as fallback for: lauchacarro/qwen2.5-translator:latest
-    "lauchacarro/qwen2.5-translator:latest": "google/gemini-2.0-flash-001",
+    # Maps a local model's base name to its OpenRouter equivalent.
+    "deepcoder": "agentica-org/deepcoder-14b-preview",
+    "deepseek-r1": "deepseek/deepseek-r1",
+    "gemma-2-9b-it": "google/gemma-2-9b-it",
+    "gemma-2-27b-it": "google/gemma-2-27b-it",
+    "gemma-3-1b-it": "google/gemma-3-1b-it",
+    "gemma-3-4b-it": "google/gemma-3-4b-it",
+    "gemma-3-12b-it": "google/gemma-3-12b-it",
+    "gemma-3-27b-it": "google/gemma-3-27b-it",
+    "gemma-3n-e4b-it": "google/gemma-3n-e4b-it",
+    "shieldgemma-9b": "google/shieldgemma-9b",
+    "llava": "liuhaotian/llava-7b",
+    "llava:13b": "liuhaotian/llava-13b",
+    "llama-3.1-8b-instruct": "meta-llama/llama-3.1-8b-instruct",
+    "llama-3.2-1b-instruct": "meta-llama/llama-3.2-1b-instruct",
+    "llama-3.3-8b-instruct": "meta-llama/llama-3.3-8b-instruct",
+    "llama-guard-3-1b": "meta-llama/llama-guard-3-1b",
+    "llama-guard-3-8b": "meta-llama/llama-guard-3-8b",
+    "codestral": "mistralai/codestral",
+    "mistral-7b": "mistralai/mistral-7b",
+    "mistral-nemo": "mistralai/mistral-nemo",
+    "mistral-small:24b": "mistralai/mistral-small-24b",
+    "mixtral-8x7b-instruct": "mistralai/mixtral-8x7b-instruct",
+    "ministral-8b": "mistralai/ministral-8b",
+    "phi-4": "microsoft/phi-4",
+    "qwen2.5-translator": "qwen/qwen2.5-translator",
+    "qwen2.5-32b-instruct": "qwen/qwen2.5-32b-instruct",
+    "qwen3-8b": "qwen/qwen3-8b",
+    "qwen3-14b": "qwen/qwen3-14b",
+    "qwen3-30b-a3b": "qwen/qwen3-30b-a3b",
+    "qwq-32b": "qwen/qwq-32b",
+    "sailor2-20b": "sailor2/sailor2-20b",
 }
 
 OPENROUTER_TO_OLLAMA_MAP = {v: k for k, v in OLLAMA_TO_OPENROUTER_MAP.items()}
