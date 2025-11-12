@@ -156,7 +156,7 @@
         "26",
         0
       ],
-      "input_context": "professional translator",
+      "input_context": "",
       "style_prompt": "Translate the prompt into English with maximal semantic preservation. If it is already in English, do not change the input.\n\nException: The following keywords must remain exactly as they appear and must not be translated or altered:\n- context:\n- Kontext:\n- Kunstform\n- art form:\n- Style:\n- Stil:\n- Prompt Interception:\n- Promptinterception\n- Prompt-Interception\n- PromptInterception\n\nPreserve the original structure and formatting. Maintain the exact order and punctuation of the input wherever possible.\n\nDo not translate or modify:\n- Proper names\n- Ritual terms\n- Material names\nunless there is a widely used English equivalent.\n\nMark such culturally specific or untranslated terms using double square brackets (e.g. [[egungun]]) and leave them in their original position.\n\nDo not paraphrase, interpret, summarize, or rephrase. Do not add any comments, notes, or explanations.\n\nReturn only the translated prompt as plain text output, with no extra text.\n",
       "api_key": [
         "11",

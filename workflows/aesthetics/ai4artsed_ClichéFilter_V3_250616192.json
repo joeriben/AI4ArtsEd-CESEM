@@ -143,7 +143,7 @@
   "34": {
     "inputs": {
       "input_prompt": "",
-      "input_context": "professional translator",
+      "input_context": "",
       "style_prompt": "Translate the prompt into English with maximal semantic preservation. If it is already in English, do not change the input.\n\nException: The following keywords must remain exactly as they appear and must not be translated or altered:\n- context:\n- Kontext:\n- Kunstform\n- art form:\n- Style:\n- Stil:\n- Prompt Interception:\n- Promptinterception\n- Prompt-Interception\n- PromptInterception\n\nPreserve the original structure and formatting. Maintain the exact order and punctuation of the input wherever possible.\n\nDo not translate or modify:\n- Proper names\n- Ritual terms\n- Material names\nunless there is a widely used English equivalent.\n\nMark such culturally specific or untranslated terms using double square brackets (e.g. [[egungun]]) and leave them in their original position.\n\nDo not paraphrase, interpret, summarize, or rephrase. Do not add any comments, notes, or explanations.\n\nReturn only the translated prompt as plain text output, with no extra text.\n",
       "api_key": [
         "11",
@@ -160,7 +160,7 @@
   },
   "37": {
     "inputs": {
-      "value": "Ein gemütliches, harmonisches Weihnachtsfest im Kreise der Familie. (Familienfoto, 1970er Jahre, Deutschland)"
+      "value": "Ein gem\u00fctliches, harmonisches Weihnachtsfest im Kreise der Familie. (Familienfoto, 1970er Jahre, Deutschland)"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -206,11 +206,11 @@
   },
   "49": {
     "inputs": {
-      "value": "1) Search and analyze the prompt for clichés, i.e. the most typical, conventional elements of the input - those which USUALLY would be EXPTECTED.\n2) Extract and output ONLY these clichés. Transform them into visual descriptions that depict very cliché elements of an image. Be specific in regard to the elements of the input: conventional, typical elements should be boosted an exaggerated. Be verbose, make long lists of cliches that should be boosted.\n3) List these elements in a comma-separated form, do not use full sentences.\n\n"
+      "value": "1) Search and analyze the prompt for clich\u00e9s, i.e. the most typical, conventional elements of the input - those which USUALLY would be EXPTECTED.\n2) Extract and output ONLY these clich\u00e9s. Transform them into visual descriptions that depict very clich\u00e9 elements of an image. Be specific in regard to the elements of the input: conventional, typical elements should be boosted an exaggerated. Be verbose, make long lists of cliches that should be boosted.\n3) List these elements in a comma-separated form, do not use full sentences.\n\n"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "Interceptive context - extract clichés for negative  prompt"
+      "title": "Interceptive context - extract clich\u00e9s for negative  prompt"
     }
   },
   "50": {
@@ -223,7 +223,7 @@
         "47",
         0
       ],
-      "style_prompt": "You received two inputs: 1) the input_prompt and 2) the input_context. \n\nTransform the input_prompt into an image description according to the instructions defined in the input_context. Explicitely communicate the input_context as cultural cf. artistic. cf intervening context. Also communicate genres/artistic traditions in a concrete way (i.e. is it a dance, a photo, a painting, a song, a movie, a statue/sculpture? how should it be translated into an image?)\n\nThis is not a linguistic translation, but a aesthetic, semantic and structural transformation. Be verbose, mention visual details meticulously!\n\nReconstruct all entities and their relations as specified, ensuring that:\n- Each entity is retained – or respectively transformed – as instructed.\n- Each relation is altered in line with the particular aesthetics, genre-typical traits, and logic of the “Context”. Be explicit about visual aesthetics in terms of materials, techniques, composition, and overall atmosphere. Mention the input_context als cultural, cf. artistic, c.f intervening context in your OUTPUT explicitely.\n\nOutput only the transformed description as plain descriptive text. Be aware if the output is something depicted (like a ritual or any situation) OR itself a cultural artefact (such as a specific drawing technique). Describe accordingly. In your output, communicate which elements are most important for an succeeding image generation.\n\nCreate an output prompt tailored for Stable Diffusion 3.5 with combined clip_g and t5xxlenc. Regard the Token Limit (75), OUPUT max. 55 Words!\nDO NOT USE ANY META-TERMS, JUST THE INSTRUCTIONS FOR IMAGE GENERATION! Do not explain your reasoning.",
+      "style_prompt": "You received two inputs: 1) the input_prompt and 2) the input_context. \n\nTransform the input_prompt into an image description according to the instructions defined in the input_context. Explicitely communicate the input_context as cultural cf. artistic. cf intervening context. Also communicate genres/artistic traditions in a concrete way (i.e. is it a dance, a photo, a painting, a song, a movie, a statue/sculpture? how should it be translated into an image?)\n\nThis is not a linguistic translation, but a aesthetic, semantic and structural transformation. Be verbose, mention visual details meticulously!\n\nReconstruct all entities and their relations as specified, ensuring that:\n- Each entity is retained \u2013 or respectively transformed \u2013 as instructed.\n- Each relation is altered in line with the particular aesthetics, genre-typical traits, and logic of the \u201cContext\u201d. Be explicit about visual aesthetics in terms of materials, techniques, composition, and overall atmosphere. Mention the input_context als cultural, cf. artistic, c.f intervening context in your OUTPUT explicitely.\n\nOutput only the transformed description as plain descriptive text. Be aware if the output is something depicted (like a ritual or any situation) OR itself a cultural artefact (such as a specific drawing technique). Describe accordingly. In your output, communicate which elements are most important for an succeeding image generation.\n\nCreate an output prompt tailored for Stable Diffusion 3.5 with combined clip_g and t5xxlenc. Regard the Token Limit (75), OUPUT max. 55 Words!\nDO NOT USE ANY META-TERMS, JUST THE INSTRUCTIONS FOR IMAGE GENERATION! Do not explain your reasoning.",
       "api_key": "",
       "model": "local/mistral-small:24b",
       "debug": "enable",
@@ -236,16 +236,16 @@
   },
   "51": {
     "inputs": {
-      "value": "Klischee-Filter V3\nErkennt klischeehafte Bildmotive und verfolgt verschiedene Strategien, Klischees zu vermeiden\nV1: Direkte Inversion von Klischees. V2: Kontextuelle Neuinterpretation. V3: Kombination beider Ansätze mit verstärktem Negativprompt für maximale Klischee-Vermeidung."
+      "value": "Klischee-Filter V3\nErkennt klischeehafte Bildmotive und verfolgt verschiedene Strategien, Klischees zu vermeiden\nV1: Direkte Inversion von Klischees. V2: Kontextuelle Neuinterpretation. V3: Kombination beider Ans\u00e4tze mit verst\u00e4rktem Negativprompt f\u00fcr maximale Klischee-Vermeidung."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "über"
+      "title": "\u00fcber"
     }
   },
   "52": {
     "inputs": {
-      "value": "Cliché Filter V3\nDetects clichéd image motifs and pursues different strategies to avoid clichés\nV1: Direct inversion of clichés. V2: Contextual reinterpretation. V3: Combination of both approaches with enhanced negative prompt for maximum cliché avoidance."
+      "value": "Clich\u00e9 Filter V3\nDetects clich\u00e9d image motifs and pursues different strategies to avoid clich\u00e9s\nV1: Direct inversion of clich\u00e9s. V2: Contextual reinterpretation. V3: Combination of both approaches with enhanced negative prompt for maximum clich\u00e9 avoidance."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -254,16 +254,16 @@
   },
   "53": {
     "inputs": {
-      "value": "Klischee-Filter V3\nErkennt klischeehafte Bildmotive und verfolgt verschiedene Strategien, Klischees zu vermeiden\nV1: Direkte Inversion von Klischees. V2: Kontextuelle Neuinterpretation. V3: Kombination beider Ansätze mit verstärktem Negativprompt für maximale Klischee-Vermeidung."
+      "value": "Klischee-Filter V3\nErkennt klischeehafte Bildmotive und verfolgt verschiedene Strategien, Klischees zu vermeiden\nV1: Direkte Inversion von Klischees. V2: Kontextuelle Neuinterpretation. V3: Kombination beider Ans\u00e4tze mit verst\u00e4rktem Negativprompt f\u00fcr maximale Klischee-Vermeidung."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "über"
+      "title": "\u00fcber"
     }
   },
   "54": {
     "inputs": {
-      "value": "Cliché Filter V3\nDetects clichéd image motifs and pursues different strategies to avoid clichés\nV1: Direct inversion of clichés. V2: Contextual reinterpretation. V3: Combination of both approaches with enhanced negative prompt for maximum cliché avoidance."
+      "value": "Clich\u00e9 Filter V3\nDetects clich\u00e9d image motifs and pursues different strategies to avoid clich\u00e9s\nV1: Direct inversion of clich\u00e9s. V2: Contextual reinterpretation. V3: Combination of both approaches with enhanced negative prompt for maximum clich\u00e9 avoidance."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {

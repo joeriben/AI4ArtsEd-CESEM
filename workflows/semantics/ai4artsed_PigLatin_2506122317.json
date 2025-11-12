@@ -140,7 +140,7 @@
   "34": {
     "inputs": {
       "input_prompt": "",
-      "input_context": "professional translator",
+      "input_context": "",
       "style_prompt": "Translate the prompt into English with maximal semantic preservation. If it is already in English, do not change the input.\n\nException: The following keywords must remain exactly as they appear and must not be translated or altered:\n- context:\n- Kontext:\n- Kunstform\n- art form:\n- Style:\n- Stil:\n- Prompt Interception:\n- Promptinterception\n- Prompt-Interception\n- PromptInterception\n\nPreserve the original structure and formatting. Maintain the exact order and punctuation of the input wherever possible.\n\nDo not translate or modify:\n- Proper names\n- Ritual terms\n- Material names\nunless there is a widely used English equivalent.\n\nMark such culturally specific or untranslated terms using double square brackets (e.g. [[egungun]]) and leave them in their original position.\n\nDo not paraphrase, interpret, summarize, or rephrase. Do not add any comments, notes, or explanations.\n\nReturn only the translated prompt as plain text output, with no extra text.\n",
       "api_key": [
         "11",
@@ -174,7 +174,7 @@
         "44",
         0
       ],
-      "style_prompt": "You received two inputs: 1) the input_prompt and 2) the input_context. \n\nTransform the input_prompt into an image description according to the instructions defined in the input_context. Explicitely communicate the input_context as cultural cf. artistic. cf intervening context. Also communicate genres/artistic traditions in a concrete way (i.e. is it a dance, a photo, a painting, a song, a movie, a statue/sculpture? how should it be translated into an image?)\n\nThis is not a linguistic translation, but a aesthetic, semantic and structural transformation. Be verbose!\n\nReconstruct all entities and their relations as specified, ensuring that:\n- Each entity is retained – or respectively transformed – as instructed.\n- Each relation is altered in line with the particular aesthetics, genre-typical traits, and logic of the “Context”. Be explicit about visual aesthetics in terms of materials, techniques, composition, and overall atmosphere. Mention the input_context als cultural, cf. artistic, c.f intervening context in your OUTPUT explicitely.\n\nOutput only the transformed description as plain descriptive text. Be aware if the output is something depicted (like a ritual or any situation) OR itself a cultural artefact (such as a specific drawing technique). Describe accordingly. In your output, communicate which elements are most important for an succeeding image generation.\n\nCreate an output prompt tailored for Stable Diffusion 3.5 with combined clip_g and t5xxlenc. Regard the Token Limit (75), OUPUT max. 55 Words!\nDO NOT USE ANY META-TERMS, JUST THE INSTRUCTIONS FOR IMAGE GENERATION! Do not explain your reasoning.",
+      "style_prompt": "You received two inputs: 1) the input_prompt and 2) the input_context. \n\nTransform the input_prompt into an image description according to the instructions defined in the input_context. Explicitely communicate the input_context as cultural cf. artistic. cf intervening context. Also communicate genres/artistic traditions in a concrete way (i.e. is it a dance, a photo, a painting, a song, a movie, a statue/sculpture? how should it be translated into an image?)\n\nThis is not a linguistic translation, but a aesthetic, semantic and structural transformation. Be verbose!\n\nReconstruct all entities and their relations as specified, ensuring that:\n- Each entity is retained \u2013 or respectively transformed \u2013 as instructed.\n- Each relation is altered in line with the particular aesthetics, genre-typical traits, and logic of the \u201cContext\u201d. Be explicit about visual aesthetics in terms of materials, techniques, composition, and overall atmosphere. Mention the input_context als cultural, cf. artistic, c.f intervening context in your OUTPUT explicitely.\n\nOutput only the transformed description as plain descriptive text. Be aware if the output is something depicted (like a ritual or any situation) OR itself a cultural artefact (such as a specific drawing technique). Describe accordingly. In your output, communicate which elements are most important for an succeeding image generation.\n\nCreate an output prompt tailored for Stable Diffusion 3.5 with combined clip_g and t5xxlenc. Regard the Token Limit (75), OUPUT max. 55 Words!\nDO NOT USE ANY META-TERMS, JUST THE INSTRUCTIONS FOR IMAGE GENERATION! Do not explain your reasoning.",
       "api_key": [
         "11",
         0
@@ -236,11 +236,11 @@
   },
   "47": {
     "inputs": {
-      "value": "Pig Latin Transformation\nWendet Pig-Latin-Regeln auf Prompts an\nEin spielerischer linguistischer Filter, der Wörter nach Pig-Latin-Prinzipien umformt."
+      "value": "Pig Latin Transformation\nWendet Pig-Latin-Regeln auf Prompts an\nEin spielerischer linguistischer Filter, der W\u00f6rter nach Pig-Latin-Prinzipien umformt."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "über"
+      "title": "\u00fcber"
     }
   },
   "48": {
@@ -254,11 +254,11 @@
   },
   "49": {
     "inputs": {
-      "value": "Pig Latin Transformation\nWendet Pig-Latin-Regeln auf Prompts an\nEin spielerischer linguistischer Filter, der Wörter nach Pig-Latin-Prinzipien umformt."
+      "value": "Pig Latin Transformation\nWendet Pig-Latin-Regeln auf Prompts an\nEin spielerischer linguistischer Filter, der W\u00f6rter nach Pig-Latin-Prinzipien umformt."
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
-      "title": "über"
+      "title": "\u00fcber"
     }
   },
   "50": {
