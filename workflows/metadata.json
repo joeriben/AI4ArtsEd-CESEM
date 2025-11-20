@@ -537,11 +537,11 @@
     "ai4artsed_(((PromptInterception)))_2507101853": {
       "category": "model",
       "name": {
-        "de": "Prompt-Interception",
+        "de": "Du bestimmst die Regeln",
         "en": "Prompt Interception"
       },
       "description": {
-        "de": "Ermöglicht Erprobung von (((Prompt-Interception))) durch 3-fach-Klammern innerhalb eines Eingabefeldes",
+        "de": "Regeln in 3-fache Klammern, z.B. \"Eine Katze auf der Matratze (((mache alles rot-grün kariert und mache aus allem eine magische Geschichte)))\"",
         "en": "Enables testing of (((prompt interception))) using triple brackets within an input field"
       },
       "longDescription": {

@@ -307,6 +307,22 @@ button.processing .spinner {
   background-color: var(--info-bg);
   border: 1px solid var(--info-border);
   border-radius: var(--radius-md);
+  position: relative;
+  z-index: 100;
+  color: #000000;
+  font-style: normal;
+}
+
+#animationCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 200;
+  display: none;
+  background: transparent;
 }
 
 /* Status Messages */
@@ -540,8 +556,8 @@ button.processing .spinner {
   border: 1px solid var(--info-border);
   border-radius: var(--radius-sm);
   font-size: var(--font-size-md);
-  color: var(--text-secondary);
-  font-style: italic;
+  color: #000000;
+  font-style: normal;
 }
 
 /* Workflow Mode Info */

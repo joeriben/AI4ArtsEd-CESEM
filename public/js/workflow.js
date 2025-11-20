@@ -150,8 +150,18 @@ export async function loadWorkflows() {
                 }
             });
             
-            // Add categorized workflows
-            Object.keys(workflowsByCategory).sort().forEach(category => {
+            // Add categorized workflows with custom order
+            const categoryOrder = ['model', 'semantics', 'aesthetics', 'across', 'arts_and_heritage', 'flow', 'LLM', 'sound', 'vector'];
+            const sortedCategories = Object.keys(workflowsByCategory).sort((a, b) => {
+                const indexA = categoryOrder.indexOf(a);
+                const indexB = categoryOrder.indexOf(b);
+                if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+                if (indexA !== -1) return -1;
+                if (indexB !== -1) return 1;
+                return a.localeCompare(b);
+            });
+
+            sortedCategories.forEach(category => {
                 const categoryName = workflowMetadata.categories[category][currentLanguage] || 
                                    workflowMetadata.categories[category]['de'] || 
                                    category;
@@ -192,12 +202,20 @@ export async function loadWorkflows() {
             }
             
             ui.workflow.innerHTML = optionsHtml;
-            
+
+            // Set default workflow to Prompt Interception instead of random
+            const defaultWorkflow = 'model/ai4artsed_(((PromptInterception)))_2507101853.json';
+            ui.workflow.value = defaultWorkflow;
+
             // Add event listener for workflow selection
             ui.workflow.addEventListener('change', () => {
                 checkWorkflowSafetyNode();
                 updateWorkflowDescription();
             });
+
+            // Trigger initial checks for default workflow
+            checkWorkflowSafetyNode();
+            updateWorkflowDescription();
         }
     } catch (error) {
         console.error('Failed to load workflows:', error);

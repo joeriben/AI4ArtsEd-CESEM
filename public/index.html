@@ -41,7 +41,7 @@
                     <label for="prompt">Prompt eingeben und/oder Bild hochladen</label>
                     <div id="dual-input-wrapper">
                         <div id="prompt-container">
-                            <textarea id="prompt" placeholder="z.B. Eine verlassene Bibliothek mit hohen Regalen voller alter Bücher. Sonnenstrahlen fallen durch staubige Fenster und erzeugen warmes Licht. In der Mitte steht ein einzelner Sessel. Fotografischer Stil, realistische Details."></textarea>
+                            <textarea id="prompt" placeholder="Eine Katze auf der Matratze (((mache alles rot-grün kariert und mache aus allem eine magische Geschichte)))"></textarea>
                         </div>
                         <div id="image-input-container">
                             <div id="image-upload-area">
@@ -140,12 +140,13 @@
                     </div>
                 </div>
                 
-                <button id="submitBtn" onclick="submitPrompt()">Generieren<span class="spinner"></span></button>
+                <button id="submitBtn" onclick="submitPrompt()">Los!<span class="spinner"></span></button>
                 <div id="privacy-hint" style="font-size: 0.8em; color: #666; margin-top: 5px;">
                     Hinweis: Generierte Inhalte werden zu Forschungszwecken auf dem Server gespeichert. Es werden keine User- oder IP-Daten erfasst. Hochgeladene Bilder werden nicht gespeichert.
                 </div>
             </div>
 
+            <canvas id="animationCanvas" style="display: none;"></canvas>
             <div id="processingInfo" style="display: none;">
                 <div class="message">Processing...</div>
                 <div class="timer">Elapsed time: 0s</div>

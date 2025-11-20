@@ -22,7 +22,7 @@ export async function submitPromptWithFastPolling() {
     if (ui.submitBtn.disabled) return;
     
     clearOutputDisplays();
-    startProcessingDisplay("Generierung...");
+    startProcessingDisplay("KI berechnet Text und Bild (Dauer ca. 1/2 - 2 Minuten)");
 
     const workflowName = ui.workflow.value;
     const promptText = ui.prompt.value.trim();
@@ -192,7 +192,7 @@ export async function submitPromptWithFastPolling() {
         }
         
         // Update status for generation
-        ui.processingMessage.textContent = 'Generierung läuft...';
+        ui.processingMessage.textContent = 'KI berechnet Text und Bild (Dauer ca. 1/2 - 2 Minuten)';
         
         // Start fast polling with shorter timeout
         startFastPolling(result.prompt_id);

@@ -2,8 +2,8 @@
 
 :root {
   /* Primary Colors */
-  --primary-color: #007bff;
-  --primary-hover: #0056b3;
+  --primary-color: #3D5A9F;
+  --primary-hover: #2E4580;
   --primary-disabled: #99caff;
   
   /* Status Colors */
@@ -22,12 +22,12 @@
   --warning-border: #ffeeba;
   --warning-text: #856404;
   
-  --info-bg: #e7f3ff;
-  --info-border: #b8daff;
+  --info-bg: #D8D8D8;
+  --info-border: #B0B0B0;
   
-  /* Background Colors --body-bg: #f0f2f5; */ 
-  --body-bg: #444444;
-  --container-bg: #ffffff;
+  /* Background Colors --body-bg: #f0f2f5; */
+  --body-bg: #43464B;
+  --container-bg: #E3E3E3;
   --input-bg: #ffffff;
   --code-bg: #f0f2f5;
   --hover-bg: #f0f8ff;
