@@ -4,13 +4,13 @@
 const translations = {
     de: {
         'execution-mode-label': 'Ausführungsmodus',
-        'seed-control-label': 'Seed-Kontrolle',
+        'seed-control-label': 'Was ist Dein Plan?',
         'safety-level-label': 'Sicherheitsstufe',
         'privacy-hint': 'Hinweis: Generierte Inhalte werden zu Forschungszwecken auf dem Server gespeichert. Es werden keine User- oder IP-Daten erfasst. Hochgeladene Bilder werden nicht gespeichert.',
         // Radio button labels
-        'seed-random': 'Zufall',
+        'seed-random': 'ein neues Bild beginnen',
         'seed-standard': '123456789',
-        'seed-fixed': 'letzter Seed',
+        'seed-fixed': 'am selben Bild weiterarbeiten',
         'eco-mode': 'Eco (Lokal)',
         'fast-mode': 'Schnell (Cloud)',
         'safety-off': 'Aus',
@@ -28,13 +28,13 @@ const translations = {
     },
     en: {
         'execution-mode-label': 'Execution Mode',
-        'seed-control-label': 'Seed Control',
+        'seed-control-label': 'What\'s your plan?',
         'safety-level-label': 'Safety Level',
         'privacy-hint': 'Note: Generated content is saved on the server for research purposes. No user or IP data is collected. Uploaded images are not saved.',
         // Radio button labels
-        'seed-random': 'Random',
+        'seed-random': 'start a new image',
         'seed-standard': '123456789',
-        'seed-fixed': 'last seed',
+        'seed-fixed': 'continue with same image',
         'eco-mode': 'Eco (Local)',
         'fast-mode': 'Fast (Cloud)',
         'safety-off': 'Off',

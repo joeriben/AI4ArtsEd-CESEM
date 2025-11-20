@@ -13,7 +13,7 @@
       "en": "Arts and Heritage"
     },
     "flow": {
-      "de": "Flow",
+      "de": "Extras",
       "en": "Flow"
     },
     "LLM": {
@@ -21,15 +21,15 @@
       "en": "Language Models"
     },
     "model": {
-      "de": "Modelle",
+      "de": "Hier bestimmst Du",
       "en": "Models"
     },
     "semantics": {
-      "de": "Semantik",
+      "de": "Sprachspiel",
       "en": "Semantics"
     },
     "sound": {
-      "de": "Sound",
+      "de": "Musik",
       "en": "Sound"
     },
     "vector": {
@@ -637,7 +637,7 @@
         "en": "Stable Diffusion 3.5 Standard"
       },
       "description": {
-        "de": "Basis-Implementation des SD 3.5 Modells",
+        "de": "Stable Diffusion 3.5 ohne alles. Benutze dies, wenn Du dieses Modell systematisch erforschen möchtest.",
         "en": "Basic implementation of the SD 3.5 model"
       },
       "longDescription": {

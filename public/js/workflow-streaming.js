@@ -28,8 +28,8 @@ export async function submitPromptWithFastPolling() {
     const promptText = ui.prompt.value.trim();
     const selectedRadio = document.querySelector('input[name="aspectRatio"]:checked');
     const aspectRatio = selectedRadio ? selectedRadio.value : '1:1';
-    const executionMode = document.querySelector('input[name="execution-mode"]:checked').value;
-    const safetyLevel = document.querySelector('input[name="safety-level"]:checked').value;
+    const executionMode = 'fast'; // Fixed execution mode
+    const safetyLevel = 'youth'; // Fixed safety level
 
     /*
     // Workflow validation removed: Backend now handles all workflow selection logic.

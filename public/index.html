@@ -63,37 +63,37 @@
                 <div>
                     <label>Seitenverhältnis</label>
                     <div class="aspect-ratio-control">
-                        <input type="radio" id="ar-16-9" name="aspectRatio" value="16:9" onchange="updateDimensions()">
-                        <label for="ar-16-9">▭ 16:9</label>
-                        
+                        <!-- <input type="radio" id="ar-16-9" name="aspectRatio" value="16:9" onchange="updateDimensions()">
+                        <label for="ar-16-9">▭ 16:9</label> -->
+
                         <input type="radio" id="ar-3-2" name="aspectRatio" value="3:2" onchange="updateDimensions()">
-                        <label for="ar-3-2">3:2</label>
-                        
-                        <input type="radio" id="ar-4-3" name="aspectRatio" value="4:3" onchange="updateDimensions()">
+                        <label for="ar-3-2">Querformat</label>
+
+                        <!-- <input type="radio" id="ar-4-3" name="aspectRatio" value="4:3" onchange="updateDimensions()">
                         <label for="ar-4-3">4:3</label>
-                        
+
                         <input type="radio" id="ar-5-4" name="aspectRatio" value="5:4" onchange="updateDimensions()">
-                        <label for="ar-5-4">5:4</label>
-                        
+                        <label for="ar-5-4">5:4</label> -->
+
                         <input type="radio" id="ar-1-1" name="aspectRatio" value="1:1" checked onchange="updateDimensions()">
-                        <label for="ar-1-1">■ 1:1</label>
-                        
-                        <input type="radio" id="ar-4-5" name="aspectRatio" value="4:5" onchange="updateDimensions()">
+                        <label for="ar-1-1">Quadrat</label>
+
+                        <!-- <input type="radio" id="ar-4-5" name="aspectRatio" value="4:5" onchange="updateDimensions()">
                         <label for="ar-4-5">4:5</label>
-                        
+
                         <input type="radio" id="ar-3-4" name="aspectRatio" value="3:4" onchange="updateDimensions()">
-                        <label for="ar-3-4">3:4</label>
-                        
+                        <label for="ar-3-4">3:4</label> -->
+
                         <input type="radio" id="ar-2-3" name="aspectRatio" value="2:3" onchange="updateDimensions()">
-                        <label for="ar-2-3">2:3</label>
-                        
-                        <input type="radio" id="ar-9-16" name="aspectRatio" value="9:16" onchange="updateDimensions()">
-                        <label for="ar-9-16">9:16 ▯</label>
+                        <label for="ar-2-3">Hochformat</label>
+
+                        <!-- <input type="radio" id="ar-9-16" name="aspectRatio" value="9:16" onchange="updateDimensions()">
+                        <label for="ar-9-16">9:16 ▯</label> -->
                     </div>
                     <div id="dimensionsDisplay"></div>
                 </div>
 
-                <div>
+                <div style="display: none;">
                     <label id="execution-mode-label">Ausführungsmodus</label>
                     <div class="mode-switch">
                         <input type="radio" id="eco-mode" name="execution-mode" value="eco">
@@ -104,21 +104,21 @@
                 </div>
 
                 <div>
-                    <label id="seed-control-label">Seed-Kontrolle</label>
+                    <label id="seed-control-label">Was ist Dein Plan?</label>
                     <div class="seed-control">
                         <div class="seed-option">
                             <input type="radio" id="seed-random" name="seed-mode" value="random" checked>
-                            <label for="seed-random">Zufall</label>
+                            <label for="seed-random">ein neues Bild beginnen</label>
                         </div>
-                        
-                        <div class="seed-option">
+
+                        <!-- <div class="seed-option">
                             <input type="radio" id="seed-standard" name="seed-mode" value="standard">
                             <label for="seed-standard">123456789</label>
-                        </div>
-                        
+                        </div> -->
+
                         <div class="seed-option">
                             <input type="radio" id="seed-fixed" name="seed-mode" value="fixed">
-                            <label for="seed-fixed">letzter Seed</label>
+                            <label for="seed-fixed">am selben Bild weiterarbeiten</label>
                         </div>
                     </div>
                     <div id="seed-info" style="display: none; font-size: 0.9em; color: #666; margin-top: 5px;">
@@ -126,16 +126,16 @@
                     </div>
                 </div>
 
-                <div>
+                <div style="display: none;">
                     <label id="safety-level-label">Sicherheitsstufe <span id="safety-plus-indicator" style="display: none; color: #4CAF50; font-weight: bold;" title="Dieses Workflow unterstützt erweiterte Sicherheitsfunktionen">Safety+ verfügbar</span></label>
                     <div class="mode-switch">
-                        <input type="radio" id="safety-off" name="safety-level" value="off" checked>
+                        <input type="radio" id="safety-off" name="safety-level" value="off">
                         <label for="safety-off">Aus</label>
-                        
+
                         <input type="radio" id="safety-youth" name="safety-level" value="youth">
                         <label for="safety-youth">Youth</label>
-                        
-                        <input type="radio" id="safety-kids" name="safety-level" value="kids">
+
+                        <input type="radio" id="safety-kids" name="safety-level" value="kids" checked>
                         <label for="safety-kids">Kids</label>
                     </div>
                 </div>
