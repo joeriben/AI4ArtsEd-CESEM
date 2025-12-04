@@ -102,6 +102,38 @@
       },
       "file": "across/ai4artsed_ImageToSound_2508101139.json"
     },
+    "ai4artsed_ImageAndSound_SD_ACE_2512032244": {
+      "category": "across",
+      "name": {
+        "de": "Bild und Sound (SA+ACE)",
+        "en": "Image and Sound (SA+ACE)"
+      },
+      "description": {
+        "de": "Erzeugt ein Bild und zwei Audio-Varianten (Stable Audio + ACE Step)",
+        "en": "Generates one image and two audio variants (Stable Audio + ACE Step)"
+      },
+      "longDescription": {
+        "de": "Multimodaler Generator mit dualem Audio-Output. Erstellt ein Bild mit SD 3.5 Large und zwei parallele Audiointerpretationen desselben Prompts: eine mit Stable Audio und eine mit ACE Step. Ermöglicht direkten Vergleich unterschiedlicher Audio-Generierungsansätze für denselben visuellen Kontext.",
+        "en": "Multimodal generator with dual audio output. Creates an image using SD 3.5 Large and two parallel audio interpretations of the same prompt: one with Stable Audio and one with ACE Step. Enables direct comparison of different audio generation approaches for the same visual context."
+      },
+      "file": "across/ai4artsed_ImageAndSound_SD_ACE_2512032244.json"
+    },
+    "ai4artsed_ImageAndSound_2512032222": {
+      "category": "across",
+      "name": {
+        "de": "Bild und Sound (ACE)",
+        "en": "Image and Sound (ACE)"
+      },
+      "description": {
+        "de": "Erzeugt Bild und Audio mit ACE Step für hochwertige Klanglandschaften",
+        "en": "Generates image and audio with ACE Step for high-quality soundscapes"
+      },
+      "longDescription": {
+        "de": "Fokussierte multimodale Generierung mit ACE Step Audio. Kombiniert SD 3.5 Large für die Bilderzeugung mit dem ACE Step v1 3.5b Modell für anspruchsvolle, narrative Audiointerpretationen. Optimiert für kohärente Bild-Klang-Kompositionen mit hoher akustischer Qualität.",
+        "en": "Focused multimodal generation with ACE Step audio. Combines SD 3.5 Large for image creation with the ACE Step v1 3.5b model for sophisticated, narrative audio interpretations. Optimized for coherent image-sound compositions with high acoustic quality."
+      },
+      "file": "across/ai4artsed_ImageAndSound_2512032222.json"
+    },
     "ai4artsed_ClichéFilter_V1_2506160013": {
       "category": "aesthetics",
       "name": {

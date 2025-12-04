@@ -144,7 +144,7 @@ function animate() {
     // Random direction changes (transgressiv!)
     if (Math.random() < 0.02) {
         const angle = Math.random() * Math.PI * 2;
-        const speed = 9 + Math.random() * 9;
+        const speed = 5 + Math.random() * 5;
         machine.vx = Math.cos(angle) * speed;
         machine.vy = Math.sin(angle) * speed;
     }

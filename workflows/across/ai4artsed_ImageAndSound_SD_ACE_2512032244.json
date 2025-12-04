@@ -1,7 +1,10 @@
 {
   "3": {
     "inputs": {
-      "seed": 788107060766093,
+      "seed": [
+        "83",
+        0
+      ],
       "steps": 25,
       "cfg": 5.5,
       "sampler_name": "euler",
@@ -52,7 +55,7 @@
   "6": {
     "inputs": {
       "text": [
-        "26",
+        "34",
         0
       ],
       "clip": [
@@ -137,9 +140,43 @@
       "title": "ai4artsed_text_prompt"
     }
   },
+  "33": {
+    "inputs": {
+      "preview": "Roaring waves in the middle of the ocean, gull cries",
+      "source": [
+        "34",
+        0
+      ]
+    },
+    "class_type": "PreviewAny",
+    "_meta": {
+      "title": "input translation"
+    }
+  },
+  "34": {
+    "inputs": {
+      "input_prompt": [
+        "26",
+        0
+      ],
+      "input_context": "professional translator",
+      "style_prompt": "Translate the prompt into English with maximal semantic preservation. \nMaintain the original structure, and preserve all culturally specific terms or non-translatable phrases in their original form. \nDo not translate proper names, ritual terms, or material names unless they have a common English usage. \nMark such terms with double brackets, e.g. [[egungun]], and preserve their position. \nDo not paraphrase, interpret, or summarize. Do not add any comments or explanations.\nReturn only the translated prompt as plain text.",
+      "api_key": [
+        "11",
+        0
+      ],
+      "model": "openrouter/google/gemini-2.5-pro [translator / $1.25/$10.00]",
+      "debug": "enable",
+      "unload_model": "yes"
+    },
+    "class_type": "ai4artsed_prompt_interception",
+    "_meta": {
+      "title": "AI4ArtsEd Translation_english"
+    }
+  },
   "37": {
     "inputs": {
-      "value": "Ein Glockenturm läutet das große Stadtfest ein."
+      "value": "Tosende Wellen mitten auf dem Ozean, Möwenschreie"
     },
     "class_type": "PrimitiveStringMultiline",
     "_meta": {
@@ -157,238 +194,22 @@
       "title": "TripleCLIPLoader"
     }
   },
-  "47": {
+  "83": {
     "inputs": {
-      "prompt": "Art expert, art historian",
-      "model": "local/llava:13b",
-      "system_prompt": "Describe the image using the Panofsky analysis method. Also regard atmospheric, affective, and sonic properties.\n\nNO META-REMARKS! DO NOT MENTION THE METHOD. DO NOT MENTION YOURSELF OR PANOFSKI. DO NOT MENTION YOUR ROLE OR FUNCTION.\n\nJUST DELIVER A DESCRIPTIVE ANALYSIS AND ICONOGRAPHIC INTERPRETATION.",
-      "api_key": [
-        "49",
-        0
-      ],
-      "debug": "disable",
-      "unload_model": "no",
-      "image": [
-        "8",
-        0
-      ]
+      "value": 939320496667716
     },
-    "class_type": "ai4artsed_image_analysis",
+    "class_type": "PrimitiveInt",
     "_meta": {
-      "title": "AI4ArtsEd Image Analysis"
+      "title": "Seed"
     }
   },
-  "48": {
-    "inputs": {
-      "preview": "",
-      "source": [
-        "47",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Image Analysis"
-    }
-  },
-  "49": {
-    "inputs": {},
-    "class_type": "ai4artsed_openrouter_key",
-    "_meta": {
-      "title": "Secure Access to OpenRouter API Key"
-    }
-  },
-  "50": {
-    "inputs": {
-      "prompt": "",
-      "model": "local/llava:13b",
-      "system_prompt": "",
-      "api_key": "",
-      "debug": "disable",
-      "unload_model": "no"
-    },
-    "class_type": "ai4artsed_image_analysis",
-    "_meta": {
-      "title": "AI4ArtsEd Image Analysis"
-    }
-  },
-  "64": {
-    "inputs": {
-      "model": [
-        "70",
-        0
-      ],
-      "operation": [
-        "71",
-        0
-      ]
-    },
-    "class_type": "LatentApplyOperationCFG",
-    "_meta": {
-      "title": "LatentApplyOperationCFG"
-    }
-  },
-  "67": {
-    "inputs": {
-      "samples": [
-        "75",
-        0
-      ],
-      "vae": [
-        "72",
-        2
-      ]
-    },
-    "class_type": "VAEDecodeAudio",
-    "_meta": {
-      "title": "VAEDecodeAudio"
-    }
-  },
-  "69": {
-    "inputs": {
-      "conditioning": [
-        "76",
-        0
-      ]
-    },
-    "class_type": "ConditioningZeroOut",
-    "_meta": {
-      "title": "ConditioningZeroOut"
-    }
-  },
-  "70": {
-    "inputs": {
-      "shift": 5.000000000000001,
-      "model": [
-        "72",
-        0
-      ]
-    },
-    "class_type": "ModelSamplingSD3",
-    "_meta": {
-      "title": "ModelSamplingSD3"
-    }
-  },
-  "71": {
-    "inputs": {
-      "multiplier": 1.0000000000000002
-    },
-    "class_type": "LatentOperationTonemapReinhard",
-    "_meta": {
-      "title": "LatentOperationTonemapReinhard"
-    }
-  },
-  "72": {
-    "inputs": {
-      "ckpt_name": "ace_step_v1_3.5b.safetensors"
-    },
-    "class_type": "CheckpointLoaderSimple",
-    "_meta": {
-      "title": "Load Checkpoint"
-    }
-  },
-  "73": {
-    "inputs": {
-      "seconds": 90,
-      "batch_size": 1
-    },
-    "class_type": "EmptyAceStepLatentAudio",
-    "_meta": {
-      "title": "EmptyAceStepLatentAudio"
-    }
-  },
-  "75": {
-    "inputs": {
-      "seed": 170478668234129,
-      "steps": 150,
-      "cfg": 5,
-      "sampler_name": "euler",
-      "scheduler": "simple",
-      "denoise": 0.8700000000000002,
-      "model": [
-        "64",
-        0
-      ],
-      "positive": [
-        "76",
-        0
-      ],
-      "negative": [
-        "69",
-        0
-      ],
-      "latent_image": [
-        "73",
-        0
-      ]
-    },
-    "class_type": "KSampler",
-    "_meta": {
-      "title": "KSampler"
-    }
-  },
-  "76": {
-    "inputs": {
-      "tags": [
-        "78",
-        0
-      ],
-      "lyrics": [
-        "80",
-        0
-      ],
-      "lyrics_strength": 0.9900000000000002,
-      "clip": [
-        "72",
-        1
-      ]
-    },
-    "class_type": "TextEncodeAceStepAudio",
-    "_meta": {
-      "title": "TextEncodeAceStepAudio"
-    }
-  },
-  "77": {
-    "inputs": {
-      "preview": "",
-      "source": [
-        "80",
-        0
-      ]
-    },
-    "class_type": "PreviewAny",
-    "_meta": {
-      "title": "Preview Any"
-    }
-  },
-  "78": {
-    "inputs": {
-      "input_prompt": [
-        "47",
-        0
-      ],
-      "input_context": "Write a prompt for a music generating AI. No remarks or comments, just the description for the Audio/Music AI.",
-      "style_prompt": "Your task is to analyze the input. If it where a song, which kind of song would it be? Wich epoch, which style? Or would it rather be a soundscape? Describe the song or soundsscape meticulously!",
-      "api_key": [
-        "49",
-        0
-      ],
-      "model": "local/mistral-nemo:latest [local / $0.00]",
-      "debug": "disable",
-      "unload_model": "no"
-    },
-    "class_type": "ai4artsed_prompt_interception",
-    "_meta": {
-      "title": "AI4ArtsEd Prompt Interception"
-    }
-  },
-  "79": {
+  "84": {
     "inputs": {
       "filename_prefix": "audio/ComfyUI",
       "quality": "320k",
       "audioUI": "",
       "audio": [
-        "67",
+        "91",
         0
       ]
     },
@@ -397,35 +218,299 @@
       "title": "Save Audio (MP3)"
     }
   },
-  "80": {
+  "85": {
     "inputs": {
-      "input_prompt": [
-        "78",
-        0
-      ],
-      "input_context": "Lyricist, Song writer, word smith",
-      "style_prompt": "Your task is to analyze the input. If it is a song, which lyrics would it have? Write the lyrics for this song. Output ONLY the lyrics! Any comments would be sung, too! Keep the lines short, and regard the poetic rhythm (metrical feed).\n\nIf is it a souncscape, sharply reflect if it needs words, or not. If not, just output \".\"",
-      "api_key": "",
-      "model": "local/mistral-nemo:latest [local / $0.00]",
-      "debug": "disable",
-      "unload_model": "yes"
-    },
-    "class_type": "ai4artsed_prompt_interception",
-    "_meta": {
-      "title": "AI4ArtsEd Prompt Interception"
-    }
-  },
-  "81": {
-    "inputs": {
-      "preview": "",
-      "source": [
-        "78",
+      "text": "worst quality, bad audio,bad quality",
+      "clip": [
+        "93",
         0
       ]
     },
-    "class_type": "PreviewAny",
+    "class_type": "CLIPTextEncode",
     "_meta": {
-      "title": "Song/soundscape description"
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "87": {
+    "inputs": {
+      "ckpt_name": "OfficialStableDiffusion/stableaudio_model.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "88": {
+    "inputs": {
+      "seconds": [
+        "95",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentAudio",
+    "_meta": {
+      "title": "Empty Latent Audio"
+    }
+  },
+  "89": {
+    "inputs": {
+      "text": [
+        "34",
+        0
+      ],
+      "clip": [
+        "93",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "90": {
+    "inputs": {
+      "seconds_start": 0,
+      "seconds_total": [
+        "95",
+        0
+      ],
+      "positive": [
+        "89",
+        0
+      ],
+      "negative": [
+        "85",
+        0
+      ]
+    },
+    "class_type": "ConditioningStableAudio",
+    "_meta": {
+      "title": "ConditioningStableAudio"
+    }
+  },
+  "91": {
+    "inputs": {
+      "samples": [
+        "92",
+        0
+      ],
+      "vae": [
+        "87",
+        2
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "92": {
+    "inputs": {
+      "seed": [
+        "83",
+        0
+      ],
+      "steps": 150,
+      "cfg": 6,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1,
+      "model": [
+        "87",
+        0
+      ],
+      "positive": [
+        "90",
+        0
+      ],
+      "negative": [
+        "90",
+        1
+      ],
+      "latent_image": [
+        "88",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "93": {
+    "inputs": {
+      "clip_name": "CLIP_stableaudio_model.safetensors",
+      "type": "stable_audio",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "95": {
+    "inputs": {
+      "value": 47.6
+    },
+    "class_type": "PrimitiveFloat",
+    "_meta": {
+      "title": "duration (seconds)"
+    }
+  },
+  "96": {
+    "inputs": {
+      "model": [
+        "102",
+        0
+      ],
+      "operation": [
+        "103",
+        0
+      ]
+    },
+    "class_type": "LatentApplyOperationCFG",
+    "_meta": {
+      "title": "LatentApplyOperationCFG"
+    }
+  },
+  "99": {
+    "inputs": {
+      "samples": [
+        "107",
+        0
+      ],
+      "vae": [
+        "104",
+        2
+      ]
+    },
+    "class_type": "VAEDecodeAudio",
+    "_meta": {
+      "title": "VAE Decode Audio"
+    }
+  },
+  "101": {
+    "inputs": {
+      "conditioning": [
+        "108",
+        0
+      ]
+    },
+    "class_type": "ConditioningZeroOut",
+    "_meta": {
+      "title": "ConditioningZeroOut"
+    }
+  },
+  "102": {
+    "inputs": {
+      "shift": 5.000000000000001,
+      "model": [
+        "104",
+        0
+      ]
+    },
+    "class_type": "ModelSamplingSD3",
+    "_meta": {
+      "title": "ModelSamplingSD3"
+    }
+  },
+  "103": {
+    "inputs": {
+      "multiplier": 1.0000000000000002
+    },
+    "class_type": "LatentOperationTonemapReinhard",
+    "_meta": {
+      "title": "LatentOperationTonemapReinhard"
+    }
+  },
+  "104": {
+    "inputs": {
+      "ckpt_name": "ace_step_v1_3.5b.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "105": {
+    "inputs": {
+      "seconds": [
+        "95",
+        0
+      ],
+      "batch_size": 1
+    },
+    "class_type": "EmptyAceStepLatentAudio",
+    "_meta": {
+      "title": "EmptyAceStepLatentAudio"
+    }
+  },
+  "107": {
+    "inputs": {
+      "seed": [
+        "83",
+        0
+      ],
+      "steps": 150,
+      "cfg": 5,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 0.8700000000000002,
+      "model": [
+        "96",
+        0
+      ],
+      "positive": [
+        "108",
+        0
+      ],
+      "negative": [
+        "101",
+        0
+      ],
+      "latent_image": [
+        "105",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "108": {
+    "inputs": {
+      "tags": [
+        "34",
+        0
+      ],
+      "lyrics": "[Instrumental Tunes]\n[Sounds]\n[Atmospheres]\n[Environments]\n",
+      "lyrics_strength": 0.9900000000000002,
+      "clip": [
+        "104",
+        1
+      ]
+    },
+    "class_type": "TextEncodeAceStepAudio",
+    "_meta": {
+      "title": "TextEncodeAceStepAudio"
+    }
+  },
+  "111": {
+    "inputs": {
+      "filename_prefix": "audio/ComfyUI",
+      "quality": "320k",
+      "audioUI": "",
+      "audio": [
+        "99",
+        0
+      ]
+    },
+    "class_type": "SaveAudioMP3",
+    "_meta": {
+      "title": "Save Audio (MP3)"
     }
   }
 }
