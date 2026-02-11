@@ -151,25 +151,6 @@ Server-Sent Events (SSE) provide live updates:
 - Progress tracking
 - Media URLs when ready
 
-## 🔄 Migration to DevServer
-
-If you're interested in the next-generation architecture, see the main repository:
-
-**[ai4artsed_webserver (DevServer)](https://github.com/joeriben/ai4artsed_webserver)**
-
-DevServer features:
-- ✨ 3-Layer Pipeline Architecture (Chunks → Pipelines → Configs)
-- ✨ Backend-agnostic design (swap ComfyUI for other backends)
-- ✨ 4-Stage Pre-Interception System (translation, safety, refinement)
-- ✨ Task-based model selection
-- ✨ JSON-based config system (no code changes for new workflows)
-
-**Migration Path:**
-1. Test workflows in Legacy Server (this repo)
-2. Extract `meta_prompt` from workflow JSON
-3. Create DevServer config with `context` field
-4. Reference original workflow in `legacy_source` field
-
 ## 🛠️ Maintenance & Support
 
 ### Status: Maintenance Mode
@@ -177,7 +158,7 @@ DevServer features:
 - ✅ **Bug fixes** - Critical issues will be addressed
 - ✅ **Security updates** - Dependencies will be maintained
 - ✅ **Documentation** - Existing docs will be preserved
-- ❌ **New features** - Developed in DevServer only
+- ❌ **New features** - Development phase is finished; the platform remains in beta-status, open for developers (open source). For an advanced platform, visit our UCDCAE AI Lab https://github.com/joeriben/ucdcae-ai-lab (License: Source Available)
 - ❌ **Architecture changes** - Stability is the priority
 
 ### Known Issues
@@ -191,7 +172,6 @@ DevServer features:
 
 For issues with:
 - **Legacy Server**: Open issue in this repository
-- **DevServer**: Open issue in [main repository](https://github.com/joeriben/ai4artsed_webserver)
 - **Custom Node**: See `fyi_comfyui-customnodes_ai4artsed_comfyui/` directory
 
 ## 📚 Documentation
@@ -210,20 +190,10 @@ For bug fixes and security patches:
 3. Test thoroughly with production workflows
 4. Submit pull request with clear description
 
-### New Features → DevServer
-
-For new features and improvements, contribute to:
-**[ai4artsed_webserver (DevServer)](https://github.com/joeriben/ai4artsed_webserver)**
-
-Read [`devserver/docs/README_FIRST.md`](https://github.com/joeriben/ai4artsed_webserver/blob/main/devserver/docs/README_FIRST.md) before contributing.
-
-## 📄 License
-
-[Add your license information here]
+## 📄 License: https://github.com/joeriben/AI4ArtsEd-CESEM/tree/legacy-migration?tab=License-1-ov-file
 
 ## 🔗 Related Resources
 
-- **DevServer (Main Repo)**: https://github.com/joeriben/ai4artsed_webserver
 - **ComfyUI**: https://github.com/comfyanonymous/ComfyUI
 - **SwarmUI**: https://github.com/mcmonkeyprojects/SwarmUI
 - **Ollama**: https://ollama.ai
