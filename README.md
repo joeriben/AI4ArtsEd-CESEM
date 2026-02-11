@@ -1,6 +1,4 @@
-# AI4ArtsEd WebServer - Legacy Flask Server
-
-⚠️ **DEPRECATED as of 2025-10-30 - MAINTENANCE MODE**
+AI4ArtsEd-CESEM: A Software Framework for Critical Educational and Scientific Exploration and Manipulation of Generative AI
 
 **Production-Stable Flask Server** for the AI4ArtsEd pedagogical platform.
 
@@ -8,18 +6,13 @@
 
 ## 🔄 Repository Status
 
-This repository contains the **Legacy Flask Server** - the original production implementation that has been separated from active DevServer development for stability.
-
 - **This Repository (Legacy)**: Production Flask server (maintenance mode)
-- **[Main Repository](https://github.com/joeriben/ai4artsed_webserver)**: DevServer development and new features
-
-## 📌 When to Use Legacy Server
 
 Use this server if you need:
 
 ✅ **Stable production environment** - Battle-tested, proven implementation
 ✅ **Original ComfyUI Custom Node** - `ai4artsed_prompt_interception` integration
-✅ **Legacy workflow compatibility** - All original workflows work out-of-box
+✅ **ComfyUI API workflow compatibility** - All original workflows work out-of-box
 ✅ **SSE-based execution** - Server-Sent Events for real-time updates
 ✅ **Proven architecture** - Used in live workshops and educational settings
 
@@ -30,6 +23,7 @@ Use this server if you need:
 - Python 3.10+
 - Ollama (for local LLM) - `ollama serve`
 - ComfyUI with `ai4artsed_prompt_interception` Custom Node
+- https://github.com/joeriben/ai4artsed_comfyui_nodes
 - SwarmUI (optional, for enhanced ComfyUI on port 7821)
 
 ### Installation
